@@ -1,15 +1,11 @@
-from sys import argv
+def salary_employee():
+    try:
+        time = float(input("Выроботка в часах"))
+        salary = id(input("Ставка"))
+        bonus = int(input("Премия"))
+        result = time * salary + bonus
+        print(f'заработная плата сотрудника {result}')
+    except ValueError:
+        return print('Not a number')
 
-
-def salary(hours, price, extra):
-    return int(hours) * int(price) + int(extra)
-
-
-try:
-    script, a, b, c = argv
-    print(salary(int(a), int(b), int(c)))
-except ValueError:
-    print('wrong argument format')
-
-print((24 * 55) + 7)
-print(salary(24, 55, 7))
+salary_employee()
